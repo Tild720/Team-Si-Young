@@ -1,6 +1,7 @@
 using System.Collections;
 using Core.Scripts;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace Works.KWJ._01_Scripts
@@ -9,10 +10,14 @@ namespace Works.KWJ._01_Scripts
     {
         [SerializeField] private Image _fadeObject;
         
+        [SerializeField] private float _fadeValue = 0.01f;
+        
         private bool _isFadeing = false;
         public void FadeOutIn(bool isFadeOut = false, bool isFadeImmediately = false)
         {
             if(_isFadeing) return;
+            
+            PlayerManager.Instance.Player.IsDontAction = true;
             
             if(isFadeOut == true)
                 StartCoroutine(FadeOut(isFadeImmediately));
@@ -29,18 +34,29 @@ namespace Works.KWJ._01_Scripts
             
             while (_fadeObject.color.a > 0f)
             {
-                alpha.a -= 0.01f;
+                alpha.a -= _fadeValue;
                 _fadeObject.color = alpha;
                 yield return null;
             }
 
             alpha.a = 0f;
             _fadeObject.color = alpha;
-            
-            if(isFadeImmediately == true)
+
+            if (isFadeImmediately == true)
+            {
+                StartCoroutine(WaitSeconds());
                 StartCoroutine(FadeOut());
+            }
             else
+            {
                 _isFadeing = false;
+                PlayerManager.Instance.Player.IsDontAction = _isFadeing;
+            }
+        }
+
+        private IEnumerator WaitSeconds()
+        {
+            yield return new WaitForSeconds(1f);
         }
         
         private IEnumerator FadeOut(bool isFadeImmediately = false)
@@ -52,18 +68,24 @@ namespace Works.KWJ._01_Scripts
             
             while (_fadeObject.color.a < 1f)
             {
-                alpha.a += 0.01f;
+                alpha.a += _fadeValue;
                 _fadeObject.color = alpha;
                 yield return null;
             }
 
             alpha.a = 1f;
             _fadeObject.color = alpha;
-            
-            if(isFadeImmediately == true)
+
+            if (isFadeImmediately == true)
+            {
+                StartCoroutine(WaitSeconds());
                 StartCoroutine(FadeIn());
+            }
             else
+            {
                 _isFadeing = false;
+                PlayerManager.Instance.Player.IsDontAction = _isFadeing;
+            }
         }
     }
 }

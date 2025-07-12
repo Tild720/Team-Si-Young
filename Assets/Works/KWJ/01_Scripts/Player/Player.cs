@@ -1,16 +1,19 @@
 using Unity.Cinemachine;
 using UnityEngine;
-using Works.KWJ._01_Scripts.InteractiveObject;
 
 namespace Works.KWJ._01_Scripts
 {
     public class Player : MonoBehaviour
     {
-        [field:SerializeField] public PlayerInputSo playerInput;
-        [field:SerializeField] public PlayerMovement playerMovement;
-        [field: SerializeField] public PlayerInteraction playerInteraction;
-        [field: SerializeField] public InteractiveChecker interactiveChecker;
+        [field:SerializeField] public PlayerInputSo PlayerInput;
+        [field:SerializeField] public PlayerMovement PlayerMovement;
+        [field: SerializeField] public PlayerInteraction PlayerInteraction;
+        [field: SerializeField] public InteractiveChecker InteractiveChecker;
 
         [field: SerializeField] public CinemachineCamera Camera;
+
+        [field: SerializeField] public Transform HeadPoint;
+
+        public bool IsDontAction { get; set; }
     }
 }

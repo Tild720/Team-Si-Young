@@ -9,25 +9,51 @@ namespace Works.KWJ._01_Scripts
         
         private void OnEnable()
         {
-            player.playerInput.OnInteractionAction += OnInteraction;
+            player.PlayerInput.OnInteractionAction += OnInteraction;
         }
 
         private void OnDisable()
         {
-            player.playerInput.OnInteractionAction -= OnInteraction;
+            player.PlayerInput.OnInteractionAction -= OnInteraction;
         }
         
         private void OnInteraction()
         {
-            if (player.interactiveChecker.InteractiveCheck())
+            if (player.PlayerMovement.IsComputerView == true)
             {
-                if (player.interactiveChecker.InteractiveObject
+                player.Camera.Follow = player.HeadPoint;
+                player.PlayerMovement.IsComputerView = false;
+                return;
+            }
+            
+            if(player.IsDontAction) return;
+            
+            if (player.InteractiveChecker.InteractiveCheck())
+            {
+                if (player.InteractiveChecker.InteractiveObject
                     .TryGetComponent<IInteractiveObject>(out var interactable))
                 {
+                    InteractiveObjectCheck();
+                    
                     interactable.Interact();
                 }
             }
         }
 
+        private void InteractiveObjectCheck()
+        {
+            if (player.InteractiveChecker.InteractiveObject.
+                TryGetComponent<InteractiveComputer>(out var computer))
+            {
+                if (player.PlayerMovement.IsComputerView == false)
+                {
+                    player.Camera.Follow = computer.CameraPoint;
+                    player.PlayerMovement.IsComputerView = true;
+                }
+            }
+            
+            
+            
+        }
     }
 }
