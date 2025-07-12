@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 namespace Works.KWJ._01_Scripts
@@ -9,5 +10,6 @@ namespace Works.KWJ._01_Scripts
         [field: SerializeField] public PlayerInteraction playerInteraction;
         [field: SerializeField] public InteractiveChecker interactiveChecker;
 
+        [field: SerializeField] public CinemachineCamera Camera;
     }
 }

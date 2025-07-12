@@ -10,6 +10,8 @@ namespace Works.KWJ._01_Scripts
         private InputSystem_Actions _inputSystem;
     
         public Action<Vector2> OnMoveAction;
+        public Action<Vector2> AtLootAction;
+        public Action<bool> OnLookAroundAction;
         public Action OnInteractionAction;
     
         private void OnEnable()
@@ -36,36 +38,22 @@ namespace Works.KWJ._01_Scripts
 
         public void OnLook(InputAction.CallbackContext context)
         {
+            Vector2 lookat = context.ReadValue<Vector2>();
+            AtLootAction?.Invoke(lookat);
         }
-
-        public void OnAttack(InputAction.CallbackContext context)
-        {
-        }
-
+        
         public void OnInteract(InputAction.CallbackContext context)
         {
-            if (context.performed == true)
+            if (context.started == true)
                 OnInteractionAction?.Invoke();
         }
 
-        public void OnCrouch(InputAction.CallbackContext context)
+        public void OnLookAround(InputAction.CallbackContext context)
         {
-        }
-
-        public void OnJump(InputAction.CallbackContext context)
-        {
-        }
-
-        public void OnPrevious(InputAction.CallbackContext context)
-        {
-        }
-
-        public void OnNext(InputAction.CallbackContext context)
-        {
-        }
-
-        public void OnSprint(InputAction.CallbackContext context)
-        {
+            if (context.started == true)
+                OnLookAroundAction?.Invoke(true);
+            else if (context.started == false)
+                OnLookAroundAction?.Invoke(false);
         }
     }
 }
