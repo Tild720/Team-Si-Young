@@ -1,0 +1,63 @@
+using System;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+namespace Works.KWJ._01_Scripts
+{
+    public class PlayerInputSO : MonoBehaviour, InputSystem_Actions.IPlayerActions
+    {
+        private InputSystem_Actions _inputSystem;
+    
+        public Action<Vector2> OnMoveAction;
+        public Action OnInteractionAction;
+    
+        private void OnEnable()
+        {
+            if (_inputSystem == null)
+            {
+                _inputSystem = new InputSystem_Actions();
+                _inputSystem.Player.SetCallbacks(this);
+            }
+        
+            _inputSystem.Player.Enable();
+        }
+
+        public void OnMove(InputAction.CallbackContext context)
+        {
+            Vector2 move = context.ReadValue<Vector2>();
+            OnMoveAction?.Invoke(move);
+        }
+
+        public void OnLook(InputAction.CallbackContext context)
+        {
+        }
+
+        public void OnAttack(InputAction.CallbackContext context)
+        {
+        }
+
+        public void OnInteract(InputAction.CallbackContext context)
+        {
+        }
+
+        public void OnCrouch(InputAction.CallbackContext context)
+        {
+        }
+
+        public void OnJump(InputAction.CallbackContext context)
+        {
+        }
+
+        public void OnPrevious(InputAction.CallbackContext context)
+        {
+        }
+
+        public void OnNext(InputAction.CallbackContext context)
+        {
+        }
+
+        public void OnSprint(InputAction.CallbackContext context)
+        {
+        }
+    }
+}

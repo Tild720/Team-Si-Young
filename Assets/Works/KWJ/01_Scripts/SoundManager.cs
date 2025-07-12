@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace _01_Scripts
+namespace Works.KWJ._01_Scripts
 {
     public class SoundManager : MonoSingleton<SoundManager>
     {
