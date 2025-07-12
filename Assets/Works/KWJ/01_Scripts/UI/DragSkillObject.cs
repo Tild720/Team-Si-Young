@@ -49,6 +49,8 @@ namespace Works.KWJ._01_Scripts.UI
             if (PlayerManager.Instance.Player.PlayerMoney.CurrentMoney < skillSo.Price)
                 return;
             
+            PlayerManager.Instance.Player.PlayerMoney.SetMoney(-skillSo.Price);
+            
             lockUI.SetActive(false);
             IsBuy = true;
         }
@@ -62,6 +64,8 @@ namespace Works.KWJ._01_Scripts.UI
         
         public void OnBeginDrag(PointerEventData eventData)
         {
+            if(IsBuy == false) return;
+            
             _beginPostiton = transform.position;
             _beginParents = transform.parent;
             canvasGroup.blocksRaycasts = false;
@@ -69,11 +73,15 @@ namespace Works.KWJ._01_Scripts.UI
 
         public void OnDrag(PointerEventData eventData)
         {
+            if(IsBuy == false) return;
+            
             transform.position = eventData.position;
         }
 
         public void OnEndDrag(PointerEventData eventData)
         {
+            if(IsBuy == false) return;
+            
             if (_beginParents == transform.parent)
             {
                 if(IsInInventroySlot == true)
