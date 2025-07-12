@@ -17,6 +17,8 @@ namespace Works.KWJ._01_Scripts
         [field: SerializeField] public CinemachineCamera Camera;
 
         [field: SerializeField] public Transform HeadPoint;
+        
+        [field: SerializeField] public Transform ComputerPoint;
 
         public bool IsDontAction { get; set; }
     }

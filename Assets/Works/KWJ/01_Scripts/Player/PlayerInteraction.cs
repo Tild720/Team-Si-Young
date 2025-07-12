@@ -26,7 +26,16 @@ namespace Works.KWJ._01_Scripts
                 return;
             }
             
-            if(player.IsDontAction) return;
+            if(player.IsDontAction)
+            {
+                if (player.InteractiveChecker.InteractiveObject
+                    .TryGetComponent<InteractiveFood>(out var InteractiveFood))
+                {
+                    InteractiveFood.Interact();
+                }
+            
+                return;
+            }
             
             if (player.InteractiveChecker.InteractiveCheck())
             {
