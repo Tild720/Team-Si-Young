@@ -1,14 +1,15 @@
 using System.Collections.Generic;
+using Core.Scripts;
 using UnityEngine;
 using Works.KWJ._01_Scripts.SO;
 
 namespace Works.KWJ._01_Scripts.UI
 {
-    public class SkillInventory : MonoBehaviour
+    public class SkillManager : MonoSingleton<SkillManager>
     {
         [SerializeField] private Transform _inventoryPanel;
         [SerializeField] private GameObject _slotPrefab;
-        [SerializeField] private int _slotCount = 4;
+        [SerializeField] private int _slotCount = 3;
 
         private int _seledSlot;
         
@@ -19,7 +20,7 @@ namespace Works.KWJ._01_Scripts.UI
         {
             for (int i = 0; i < _slotCount; i++)
             {
-                if(_inventoryPanel.childCount == 4) break;
+                if(_inventoryPanel.childCount == 3) break;
                 
                 GameObject slotObject = Instantiate(_slotPrefab);
                 SkillInventorySlot skillInventorySlot = slotObject.GetComponent<SkillInventorySlot>();
