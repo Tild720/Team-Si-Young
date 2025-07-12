@@ -1,36 +1,49 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Works.KWJ._01_Scripts
 {
     public class Hunger : MonoBehaviour
     {
-        public int MaxHunger;
-        public int CurrentHunger;
+
+        [SerializeField] private int hungerValue;
+        [SerializeField] private float waitHungerTime;
+
+        [SerializeField] private int maxHunger = 100;
+        private int _currentHunger;
         
-        private void OnEnable()
+        private bool _isWaitHungerTime;
+
+        private void Awake()
         {
-            DayManager.Instance.OnNextDayAction += DecreaseHunger;
+            _currentHunger = maxHunger;
         }
 
-        private void OnDisable()
+        private void Update()
         {
-            DayManager.Instance.OnNextDayAction -= DecreaseHunger;
+            if (_isWaitHungerTime == false)
+                StartCoroutine(WaitDecreaseHunger());
         }
 
-        private void DecreaseHunger()
-        {
-            SetHunger(-10);
-        }
-        
         public void SetHunger(int hunger)
         {
-                        
-            CurrentHunger += hunger;
+            _currentHunger += hunger;
             
-            if (MaxHunger > CurrentHunger)
+            if (maxHunger > _currentHunger)
             {
-                CurrentHunger = MaxHunger;
+                _currentHunger = maxHunger;
             }
+        }
+
+        public IEnumerator WaitDecreaseHunger()
+        {
+            _isWaitHungerTime = true;
+            
+            yield return new WaitForSeconds(waitHungerTime);
+
+            _currentHunger -= hungerValue;
+            
+            _isWaitHungerTime = false;
         }
     }
 }

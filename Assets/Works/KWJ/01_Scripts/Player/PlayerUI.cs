@@ -5,7 +5,10 @@ namespace Works.KWJ._01_Scripts
     public class PlayerUI : MonoBehaviour
     {
         [SerializeField] private Player player;
-        
-        
+
+        private void Awake()
+        {
+            Cursor.visible = false;
+        }
     }
 }

@@ -6,34 +6,38 @@ namespace Works.KWJ._01_Scripts
 {
     public class InventorySlot : MonoBehaviour, IDropHandler
     {
-        private FraudSkillSo _skillSo;
+        private DragSkillObject _dagSkillObject;
         
-        public void PutInSkill(FraudSkillSo skillSo)
+        public void PutInSkill(DragSkillObject dagSkillObject)
         {
-            if (_skillSo != null)
-            {
-                
-            }
+            if(_dagSkillObject == dagSkillObject) return;
+            
+            if (_dagSkillObject != null)
+                _dagSkillObject.SetOrigin();
 
-            _skillSo = skillSo;
+            _dagSkillObject = dagSkillObject;
+            _dagSkillObject.IsInInventroySlot = true;
         }
         
         public void TakeOutSkill()
         {
-            _skillSo = null;
+            _dagSkillObject = null;
         }
 
         public SkillType GetSkillType()
         {
-            if(_skillSo != null)
-                return _skillSo.SkillType;
+            if(_dagSkillObject != null)
+                return _dagSkillObject.GetSkillSo().SkillType;
 
             return SkillType.None;
         }
     
         public void OnDrop(PointerEventData eventData)
         {
-            eventData.position = transform.position;
+            eventData.pointerDrag.transform.SetParent(transform);
+            eventData.pointerDrag.transform.position = transform.position;
+            DragSkillObject dragSkillObject  = eventData.pointerDrag.GetComponent<DragSkillObject>();
+            PutInSkill(dragSkillObject);
         }
     }
 }
