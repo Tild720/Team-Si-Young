@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 
 namespace Works.KWJ._01_Scripts
 {
-    public class PlayerInputSO : MonoBehaviour, InputSystem_Actions.IPlayerActions
+    [CreateAssetMenu(fileName = "PlayerInputSo", menuName = "SO/PlayerInputSo", order = 0)]
+    public class PlayerInputSo : ScriptableObject, InputSystem_Actions.IPlayerActions
     {
         private InputSystem_Actions _inputSystem;
     
@@ -38,6 +39,8 @@ namespace Works.KWJ._01_Scripts
 
         public void OnInteract(InputAction.CallbackContext context)
         {
+            if(context.performed == true)
+                OnInteractionAction?.Invoke();
         }
 
         public void OnCrouch(InputAction.CallbackContext context)
