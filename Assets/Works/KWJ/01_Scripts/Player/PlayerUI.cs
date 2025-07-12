@@ -1,3 +1,5 @@
+using System;
+using TMPro;
 using UnityEngine;
 
 namespace Works.KWJ._01_Scripts
@@ -6,6 +8,18 @@ namespace Works.KWJ._01_Scripts
     {
         [SerializeField] private Player player;
         
-        
+        [SerializeField] private TextMeshProUGUI playerMoney;
+        [SerializeField] private TextMeshProUGUI playerHunger;
+
+        private void Awake()
+        {
+            //Cursor.visible = false;
+        }
+
+        private void Update()
+        {
+            playerMoney.text = player.PlayerMoney.CurrentMoney + "";
+            playerHunger.text = player.PlayerHunger.CurrentHunger + "";
+        }
     }
 }
