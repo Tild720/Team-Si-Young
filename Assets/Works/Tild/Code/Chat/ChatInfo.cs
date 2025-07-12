@@ -15,6 +15,7 @@ namespace Tild.Chat
         public string name;
         public string job;
         public string address;
+        public string desc;
         public string favorite;
         public List<Chat> ChatFlow;
         public List<Chat> MoneySuccess;

@@ -17,7 +17,7 @@ namespace Tild.Chat
         public List<Choice> choices;
         public int time = 1;
         public HintType hintType;
-
+        
 
     }
 }

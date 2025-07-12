@@ -4,6 +4,7 @@
     using NUnit.Framework;
     using UnityEngine;
     using Works.KWJ._01_Scripts.SO;
+    using Works.KWJ._01_Scripts.UI;
 
     namespace Tild.Chat
     {
@@ -48,7 +49,7 @@
             {
                 canvasGroup.DOFade(0, 0.2f).OnComplete(() =>
                 {
-                    List<FraudSkillSo> list = new List<FraudSkillSo>();
+                    List<FraudSkillSo> list = SkillManager.Instance.GetSkillList();
                     foreach (FraudSkillSo fraudSkill in list)
                     {
                         print(fraudSkill.SkillName);

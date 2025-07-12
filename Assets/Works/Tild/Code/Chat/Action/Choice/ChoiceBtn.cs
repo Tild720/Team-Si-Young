@@ -29,7 +29,8 @@ namespace Tild.Chat
                
             });
             ChatManager.Instance.ChoiceMessage(currentChoice);
-            
+            ChatManager.Instance.currentTrust += currentChoice.point;
+
         }
 
         public void OnPointerUp(PointerEventData eventData)

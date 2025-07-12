@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Tild.Chat;
 using UnityEngine;
 
 namespace Works.KWJ._01_Scripts.SO
@@ -29,5 +31,7 @@ namespace Works.KWJ._01_Scripts.SO
         public SkillType SkillType;
         
         public int Price;
+
+        public List<Chat> cheatChat;
     }
 }

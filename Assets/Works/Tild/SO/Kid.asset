@@ -14,20 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chatInfo:
     NpcId: 2
-    image: {fileID: 21300000, guid: d210a4e28120a2a4db2c7101662cea35, type: 3}
+    image: {fileID: 21300000, guid: 62967623ed06ac94aa14abd70d6a454d, type: 3}
     age: 11
     name: "\uBC15\uBBFC\uADDC"
     job: "\uB0A8\uD0DC\uCD08 1\uC9F1"
     address: "\uD0DC\uC0B0\uC544\uD30C\uD2B8 13\uCE35"
-    favorite: 
+    desc: "\uC120\uD55C\uC35C \u314E\u314E"
+    favorite: "\uC120\uD55C\uC324 "
     ChatFlow:
-    - chatType: 4
+    - chatType: 1
       message: "\uB85C\uBE14\uB85D\uC2A4 \uD560\uC0AC\uB78C \uAD6C\uD569\uB2C8\uB2E4."
       point: 0
       choices: []
       time: 0
-      hintType: 0
-    - chatType: 1
+      hintType: 4
+    - chatType: 4
       message: "\uC624! \uC800\uC694! \uC800\uC694!"
       point: 0
       choices: []
@@ -51,7 +52,7 @@ MonoBehaviour:
         message: "\uC7BC\uBBFC\uC774\uB294 \uCACC;;"
         response:
         - chatType: 0
-          message: "\uCCD0\uB9DE\uC744\uB798\uC694?"
+          message: "\uC544... \uC7BC\uBBFC\uC774.."
           point: 0
           choices: []
           time: 0
