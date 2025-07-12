@@ -21,7 +21,10 @@ namespace Works.KWJ._01_Scripts.UI
 
         public void AddItem(LuxuryItemSo item, int count)
         {
-            Items[item.ItemName] += count;
+            if(Items.ContainsKey(item.ItemName) == false)
+                Items.Add(item.ItemName, count);
+            else
+                Items[item.ItemName] += count;
         }
         
         public void DecreaseItem(LuxuryItemSo item, int count)

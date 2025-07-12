@@ -12,5 +12,7 @@ namespace Works.KWJ._01_Scripts.SO
         public int Price;
         
         public int HungerValue;
+        
+        public GameObject PostObject;
     }
 }

@@ -10,5 +10,7 @@ namespace Works.KWJ._01_Scripts.SO
         public string ItemName;
 
         public int Price;
+
+        public GameObject PostObject;
     }
 }
