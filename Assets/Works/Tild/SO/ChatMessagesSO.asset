@@ -12,11 +12,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86bf2550d4424efc807e08ce106d79dd, type: 3}
   m_Name: ChatMessagesSO
   m_EditorClassIdentifier: 
+  NpcId: 1
   ChatFlow:
-  - {fileID: 0}
+  - chatType: 2
+    message: "\uC624\uC804 12:50"
+    choices: []
+    hintType: 0
+  - chatType: 1
+    message: "\uC548\uB155\uD558\uC138\uC694\n"
+    choices: []
+    hintType: 0
+  - chatType: 0
+    message: "\uBC18\uAC11\uC2B5\uB2C8"
+    choices:
+    - chatType: 0
+      message: HIHIHIIHi
+      response:
+      - chatType: 4
+        message: "\uB808\uC804\uB4DC\uB2E4 \uB808\uC804\uB4DC\uC57C~"
+        choices: []
+        hintType: 0
+      - chatType: 1
+        message: "\uC815\uB9D0 \uACE0\uB9C8\uC6CC!!!!"
+        choices: []
+        hintType: 0
+      point: 0
+    - chatType: 0
+      message: sdsdsdsd
+      response: []
+      point: 0
+    hintType: 0
+  - chatType: 1
+    message: "\uC548\uB155\uD558\uC138\uC694~~~"
+    choices: []
+    hintType: 0
+  - chatType: 1
+    message: "\uC548\uB155\uD558\uC138\uC694~~~"
+    choices: []
+    hintType: 0
+  - chatType: 1
+    message: "\uBE60\uB044 \uBE60\uB044 \uBE60"
+    choices: []
+    hintType: 0
   MoneySuccess:
-  - {fileID: 0}
+  - chatType: 1
+    message: 
+    choices: []
+    hintType: 0
   MoneyFail:
-  - {fileID: 0}
+  - chatType: 1
+    message: 
+    choices: []
+    hintType: 0
   StopChatResponse:
-  - {fileID: 0}
+  - chatType: 1
+    message: 
+    choices: []
+    hintType: 0
