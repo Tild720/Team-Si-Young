@@ -1,7 +1,6 @@
 using System.Collections;
 using Core.Scripts;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace Works.KWJ._01_Scripts
@@ -24,6 +23,11 @@ namespace Works.KWJ._01_Scripts
             else
                 StartCoroutine(FadeIn(isFadeImmediately));
         }
+        
+        private IEnumerator WaitSeconds()
+        {
+            yield return new WaitForSeconds(1f);
+        }
 
         private IEnumerator FadeIn(bool isFadeImmediately = false)
         {
@@ -44,7 +48,7 @@ namespace Works.KWJ._01_Scripts
 
             if (isFadeImmediately == true)
             {
-                StartCoroutine(WaitSeconds());
+                //StartCoroutine(WaitSeconds());
                 StartCoroutine(FadeOut());
             }
             else
@@ -52,11 +56,6 @@ namespace Works.KWJ._01_Scripts
                 _isFadeing = false;
                 PlayerManager.Instance.Player.IsDontAction = _isFadeing;
             }
-        }
-
-        private IEnumerator WaitSeconds()
-        {
-            yield return new WaitForSeconds(1f);
         }
         
         private IEnumerator FadeOut(bool isFadeImmediately = false)
@@ -78,7 +77,7 @@ namespace Works.KWJ._01_Scripts
 
             if (isFadeImmediately == true)
             {
-                StartCoroutine(WaitSeconds());
+                //StartCoroutine(WaitSeconds());
                 StartCoroutine(FadeIn());
             }
             else

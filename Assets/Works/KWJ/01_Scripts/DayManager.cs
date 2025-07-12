@@ -1,15 +1,19 @@
-using UnityEngine;
+using System;
+using Core.Scripts;
 
 namespace Works.KWJ._01_Scripts
 {
-    public class DayManager : MonoBehaviour
+    public class DayManager : MonoSingleton<DayManager>
     {
-        private int _dayCount = 1;
+        public Action OnNextDayAction;
 
-        public void DayCount()
+        public int DayCount { get; private set; } = 1;
+
+        public void DayCounter()
         {
             FadeInOut.Instance.FadeOutIn(true, true);
-            _dayCount += 1;
+            OnNextDayAction?.Invoke();
+            DayCount += 1;
         }
     }
 }
