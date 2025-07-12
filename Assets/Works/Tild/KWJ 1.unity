@@ -6082,6 +6082,7 @@ MonoBehaviour:
   PlayerMoney: {fileID: 0}
   Camera: {fileID: 2111171538}
   HeadPoint: {fileID: 1138292677}
+  ComputerPoint: {fileID: 0}
 --- !u!54 &1505660044
 Rigidbody:
   m_ObjectHideFlags: 0
