@@ -1,4 +1,3 @@
-using System;
 using ExternAssets.QuickOutline.Scripts;
 using UnityEngine;
 

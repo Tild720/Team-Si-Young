@@ -53,7 +53,7 @@ namespace Works.KWJ._01_Scripts
             _lookInput = obj;
         }
         
-        private void LookAround(bool obj)
+                private void LookAround(bool obj)
         {
             
         }

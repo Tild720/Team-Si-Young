@@ -1,5 +1,6 @@
 using Unity.Cinemachine;
 using UnityEngine;
+using Works.KWJ._01_Scripts.InteractiveObject;
 
 namespace Works.KWJ._01_Scripts
 {
