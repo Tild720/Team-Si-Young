@@ -22,6 +22,11 @@ namespace Works.KWJ._01_Scripts
         
             _inputSystem.Player.Enable();
         }
+        
+        private void OnDisable()
+        {
+            _inputSystem.Player.Disable();
+        }
 
         public void OnMove(InputAction.CallbackContext context)
         {
@@ -39,7 +44,7 @@ namespace Works.KWJ._01_Scripts
 
         public void OnInteract(InputAction.CallbackContext context)
         {
-            if(context.performed == true)
+            if (context.performed == true)
                 OnInteractionAction?.Invoke();
         }
 

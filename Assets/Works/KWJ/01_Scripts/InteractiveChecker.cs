@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Works.KWJ._01_Scripts
@@ -8,7 +7,7 @@ namespace Works.KWJ._01_Scripts
         public GameObject InteractiveObject { get; private set; }
         
         [SerializeField] private LayerMask interactiveMask;
-        [SerializeField] private float radius;
+        [SerializeField] private float range;
 
         private void Update()
         {
@@ -17,13 +16,10 @@ namespace Works.KWJ._01_Scripts
 
         public bool InteractiveCheck()
         {
-            Collider[] colliders = Physics.OverlapSphere(transform.position, radius, interactiveMask);
-            
-            if (colliders.Length > 0)
+            if (Physics.Raycast(transform.position, transform.forward,
+                    out RaycastHit hit, range, interactiveMask))
             {
-                if(colliders[0] != null)
-                    InteractiveObject = colliders[0].gameObject;
-                print(InteractiveObject == null);
+                InteractiveObject = hit.transform.gameObject;
                 return true;
             }
             
@@ -33,7 +29,8 @@ namespace Works.KWJ._01_Scripts
 
         private void OnDrawGizmos()
         {
-            Gizmos.DrawWireSphere(transform.position, radius);
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(transform.position, transform.forward * range);
         }
     }
 }

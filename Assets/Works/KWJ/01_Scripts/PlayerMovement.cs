@@ -23,6 +23,7 @@ namespace Works.KWJ._01_Scripts
         
         private void FixedUpdate()
         {
+            Camera.main.transform.rotation = Quaternion.Euler(0, rigidbody.linearVelocity.x * -50, 0);
             rigidbody.linearVelocity = _moveInput.normalized * speed;
         }
         private void OnMovement(Vector2 obj)
