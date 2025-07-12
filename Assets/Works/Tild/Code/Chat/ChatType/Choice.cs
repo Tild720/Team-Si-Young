@@ -10,8 +10,10 @@ namespace Tild.Chat
         public ChatType chatType = ChatType.ChoiceChat;
 
         [TextArea]
+        [SerializeField]
         public string message;
-        [TextArea]
+        public string Message => message;
+        
         public List<Chat> response;
         public int point;
     }

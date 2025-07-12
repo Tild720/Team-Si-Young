@@ -1,0 +1,46 @@
+{
+    "NpcId": "1",
+    "image": {
+        "instanceID": 0
+    },
+    "age": "",
+    "name": "",
+    "job": "",
+    "address": "",
+    "favorite": "",
+    "ChatFlow": [
+        {
+            "chatType": 0,
+            "message": "",
+            "point": 0,
+            "choices": [
+                {
+                    "chatType": 4,
+                    "message": "알 럽 유 ",
+                    "response": [],
+                    "point": 0
+                }
+            ],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 1,
+            "message": "ㅇㅇㄴㅇㄴㅇㄴㅇ",
+            "point": 0,
+            "choices": [
+                {
+                    "chatType": 0,
+                    "message": "ㅇㅇㅇㅇ",
+                    "response": [],
+                    "point": 0
+                }
+            ],
+            "time": 0,
+            "hintType": 0
+        }
+    ],
+    "MoneySuccess": [],
+    "MoneyFail": [],
+    "StopChatResponse": []
+}

@@ -1,0 +1,253 @@
+{
+    "NpcId": "1",
+    "image": {
+        "instanceID": 146088
+    },
+    "age": "35",
+    "name": "남태철",
+    "job": "백수",
+    "address": "광중아파트 반지하",
+    "favorite": "",
+    "ChatFlow": [
+        {
+            "chatType": 0,
+            "message": "",
+            "point": 0,
+            "choices": [
+                {
+                    "chatType": 4,
+                    "message": "안녕하세요",
+                    "response": [
+                        {
+                            "chatType": 1,
+                            "message": "안녕하세요",
+                            "point": 0,
+                            "choices": [],
+                            "time": 0,
+                            "hintType": 0
+                        }
+                    ],
+                    "point": 0
+                },
+                {
+                    "chatType": 4,
+                    "message": "꺼져",
+                    "response": [
+                        {
+                            "chatType": 1,
+                            "message": "네",
+                            "point": 0,
+                            "choices": [],
+                            "time": 0,
+                            "hintType": 0
+                        }
+                    ],
+                    "point": -100
+                }
+            ],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 0,
+            "message": "",
+            "point": 0,
+            "choices": [
+                {
+                    "chatType": 4,
+                    "message": "취미가 뭐에요?",
+                    "response": [
+                        {
+                            "chatType": 1,
+                            "message": "저는 골프 쳐요!",
+                            "point": 0,
+                            "choices": [],
+                            "time": 0,
+                            "hintType": 0
+                        }
+                    ],
+                    "point": 30
+                },
+                {
+                    "chatType": 4,
+                    "message": "어느 지역 살아요?",
+                    "response": [
+                        {
+                            "chatType": 1,
+                            "message": "아.. 개인정보라서... 죄송합니다..",
+                            "point": 0,
+                            "choices": [],
+                            "time": 0,
+                            "hintType": 0
+                        }
+                    ],
+                    "point": -100
+                }
+            ],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 0,
+            "message": "",
+            "point": 0,
+            "choices": [
+                {
+                    "chatType": 4,
+                    "message": "골프 좋죠!",
+                    "response": [
+                        {
+                            "chatType": 1,
+                            "message": "나중에 같이 가실래요?",
+                            "point": 0,
+                            "choices": [],
+                            "time": 0,
+                            "hintType": 0
+                        }
+                    ],
+                    "point": 30
+                },
+                {
+                    "chatType": 4,
+                    "message": "아.. 골프는 좀;;",
+                    "response": [
+                        {
+                            "chatType": 1,
+                            "message": "아.. 그럼 가세요.. ㅎㅎ",
+                            "point": 0,
+                            "choices": [],
+                            "time": 0,
+                            "hintType": 0
+                        }
+                    ],
+                    "point": -100
+                }
+            ],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 0,
+            "message": "",
+            "point": 0,
+            "choices": [
+                {
+                    "chatType": 4,
+                    "message": "네!",
+                    "response": [
+                        {
+                            "chatType": 1,
+                            "message": "오! 그러면 저랑 다음주에..",
+                            "point": 0,
+                            "choices": [],
+                            "time": 0,
+                            "hintType": 0
+                        },
+                        {
+                            "chatType": 1,
+                            "message": "골프장 가시죠!",
+                            "point": 0,
+                            "choices": [],
+                            "time": 0,
+                            "hintType": 0
+                        }
+                    ],
+                    "point": 10
+                },
+                {
+                    "chatType": 4,
+                    "message": "아... 제가 남자는 안만나서...",
+                    "response": [
+                        {
+                            "chatType": 1,
+                            "message": "아... 네...",
+                            "point": 0,
+                            "choices": [],
+                            "time": 0,
+                            "hintType": 0
+                        }
+                    ],
+                    "point": -100
+                }
+            ],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 4,
+            "message": "오 좋아요!",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 1,
+            "message": "제가 돈 보내드릴테니까 /nOO 골프장 예약 하세요",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 4,
+            "message": "넹",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 1,
+            "message": "......",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 4,
+            "message": ".....",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 1,
+            "message": "돈 받았어요?",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 4,
+            "message": "네! 돈 받았어요!",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        }
+    ],
+    "MoneySuccess": [
+        {
+            "chatType": 1,
+            "message": "상대를 차단하였습니다.",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 2,
+            "message": "상대를 차단하였습니다.",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        }
+    ],
+    "MoneyFail": [],
+    "StopChatResponse": []
+}

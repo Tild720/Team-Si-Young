@@ -1,0 +1,294 @@
+{
+    "NpcId": "2",
+    "image": {
+        "instanceID": 177164
+    },
+    "age": "11",
+    "name": "박민규",
+    "job": "남태초 1짱",
+    "address": "태산아파트 13층",
+    "favorite": "",
+    "ChatFlow": [
+        {
+            "chatType": 4,
+            "message": "로블록스 할사람 구합니다.",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 1,
+            "message": "오! 저요! 저요!",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 1,
+            "message": "저랑 같이 로블록스 하실래요?",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 0,
+            "message": "",
+            "point": 0,
+            "choices": [
+                {
+                    "chatType": 4,
+                    "message": "그랭",
+                    "response": [],
+                    "point": 30
+                },
+                {
+                    "chatType": 4,
+                    "message": "잼민이는 쫌;;",
+                    "response": [
+                        {
+                            "chatType": 0,
+                            "message": "쳐맞을래요?",
+                            "point": 0,
+                            "choices": [],
+                            "time": 0,
+                            "hintType": 0
+                        }
+                    ],
+                    "point": -100
+                }
+            ],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 1,
+            "message": "저희 무슨 게임 할래요?",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 4,
+            "message": "우리 라이벌 할까?",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 4,
+            "message": "라이벌 잘해?",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 1,
+            "message": "저 완전 잘하죠~",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 0,
+            "message": "",
+            "point": 0,
+            "choices": [
+                {
+                    "chatType": 4,
+                    "message": "니가? 풉이다 풉ㅋ",
+                    "response": [
+                        {
+                            "chatType": 1,
+                            "message": "개어이없네.. 걍 혼자 노세요",
+                            "point": 0,
+                            "choices": [],
+                            "time": 0,
+                            "hintType": 0
+                        }
+                    ],
+                    "point": -100
+                },
+                {
+                    "chatType": 4,
+                    "message": "올~ 멋있는데~",
+                    "response": [
+                        {
+                            "chatType": 1,
+                            "message": "개어이없네.. 걍 혼자 노세요",
+                            "point": 0,
+                            "choices": [],
+                            "time": 0,
+                            "hintType": 0
+                        }
+                    ],
+                    "point": 70
+                }
+            ],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 1,
+            "message": "ㅎㅎ 감사합니다!",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        }
+    ],
+    "MoneySuccess": [
+        {
+            "chatType": 4,
+            "message": "멋있으니까 내가 현질해줄까?",
+            "point": -50,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 1,
+            "message": "헉! 정말요?",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 0,
+            "message": "",
+            "point": 0,
+            "choices": [
+                {
+                    "chatType": 4,
+                    "message": "진짜겠냐",
+                    "response": [
+                        {
+                            "chatType": 1,
+                            "message": "저 갈게요",
+                            "point": 0,
+                            "choices": [],
+                            "time": 0,
+                            "hintType": 0
+                        }
+                    ],
+                    "point": -100
+                },
+                {
+                    "chatType": 4,
+                    "message": "진짜지~ 계정 줘바",
+                    "response": [],
+                    "point": 20
+                }
+            ],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 0,
+            "message": "감사합니다!",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 1,
+            "message": "계정 보냈어여!",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 0,
+            "message": "오케잉",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 0,
+            "message": ".......",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 2,
+            "message": "상대를 차단하였습니다.",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        }
+    ],
+    "MoneyFail": [
+        {
+            "chatType": 1,
+            "message": "그 말을 믿겠냐?",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 1,
+            "message": "이 사기꾼 ",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        },
+        {
+            "chatType": 2,
+            "message": "상대방에게 차단당했습니다. ",
+            "point": 0,
+            "choices": [],
+            "time": 0,
+            "hintType": 0
+        }
+    ],
+    "StopChatResponse": [
+        {
+            "chatType": 0,
+            "message": "",
+            "point": 0,
+            "choices": [
+                {
+                    "chatType": 4,
+                    "message": "...",
+                    "response": [
+                        {
+                            "chatType": 1,
+                            "message": "더 할말 있나",
+                            "point": 0,
+                            "choices": [],
+                            "time": 0,
+                            "hintType": 0
+                        },
+                        {
+                            "chatType": 1,
+                            "message": "줄 거라도 있으신가?!",
+                            "point": 0,
+                            "choices": [],
+                            "time": 0,
+                            "hintType": 0
+                        }
+                    ],
+                    "point": 0
+                }
+            ],
+            "time": 0,
+            "hintType": 0
+        }
+    ]
+}

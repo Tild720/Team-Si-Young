@@ -69,7 +69,7 @@ namespace Works.KWJ._01_Scripts
                     Quaternion currentRotation = player.Camera.transform.localRotation;
                     
                     player.Camera.transform.localRotation = Quaternion.Lerp(currentRotation, 
-                                        Quaternion.Euler(0, -90, 0), Time.deltaTime * cameraSmooth);
+                                        Quaternion.Euler(4.7f, -90, 0), Time.deltaTime * cameraSmooth);
                 }
             }
             else

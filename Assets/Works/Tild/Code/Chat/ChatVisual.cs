@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
@@ -14,20 +15,32 @@ namespace Tild.Chat
         [SerializeField] private GameObject chatParent;
         [SerializeField] private GameObject myChatPrefab, targetPrefab,alertPrefab, loadMyChatPrefab, loadtargetPrefab, loadAlertPrefab;
 
+        private void Awake()
+        {
+            scrollRect = GetComponentInChildren<ScrollRect>();
+        }
+
         public void ShowChat(Chat chat)
         {
             WaitChat(chat.time);
+            scrollRect.velocity = Vector2.one;
             switch (chat.chatType)
             {
-                
+                    
                 case ChatType.TargetChat:
                     ChatBubble TargetChatBubble = Instantiate(targetPrefab, chatParent.transform).transform.GetComponent<ChatBubble>();
                     TargetChatBubble.Initialize(chat);
                     
                     break;
                 case ChatType.ChoiceChat:
+                    if (chat.message == "")
+                    {
+                        ChatManager.Instance.GetReady(); 
+                        return;
+                    }
                     ChatBubble ChoiceChatBubble = Instantiate(myChatPrefab, chatParent.transform).transform.GetComponent<ChatBubble>();
                     ChoiceChatBubble.Initialize(chat);
+                    
                     break;
                 case ChatType.AlertChat:
                     ChatBubble AlertChatBubble = Instantiate(alertPrefab, chatParent.transform).transform.GetComponent<ChatBubble>();

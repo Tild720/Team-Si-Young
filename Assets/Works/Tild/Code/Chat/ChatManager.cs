@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Tild.Chat;
 using Unity.VisualScripting;
+using Works.KWJ._01_Scripts.SO;
 
 namespace Tild.Chat
 {
@@ -15,19 +16,31 @@ namespace Tild.Chat
         public UnityEvent<ChatHistory> onChatLoaded;
         public UnityEvent onChoiceChatSent;
         public UnityEvent onChatClosed;
-        private ChatSO currentChatSO;
+        public UnityEvent onChoiced;
+        private ChatInfo currentChatSO;
+        private int currentTrust = 0;
+        
         private int index = 0; 
         private bool isReady = true;
         private bool isClosed = false;
         private bool isChoising = false;
         private Chat currentChoice;
+        private bool isOver;
+
+        [SerializeField] private GameObject chatGUI;
+        [SerializeField] private GameObject exploreGUI;
+       // [SerializeField] private GameObject 
 
         private Dictionary<string, ChatHistory> chatHistories = new();
         
-        public void StartChat(ChatSO getChatSO) 
+        public void StartChat(ChatInfo getChatSO) 
         {
             isReady = true;
             currentChatSO = getChatSO;
+            currentTrust = 0;
+            isOver = false;
+            currentChoice = null;
+            isChoising = false;
             
             if (chatHistories.ContainsKey(getChatSO.NpcId))
             {
@@ -35,14 +48,33 @@ namespace Tild.Chat
             }
             else
             {
-                StartCoroutine(MessageFlow());
+                StartCoroutine(MessageFlow(getChatSO.ChatFlow));
             }
             
         }
 
         public void ChoiceMessage(Choice choice)
         {
+            onChoiced.Invoke();
             StartCoroutine(ChoiceFlow(choice));
+        }
+        public void MoneyChoiceMessage(FraudSkillSo fraudSkillSo)
+        {
+            onChoiced.Invoke();
+            if (fraudSkillSo.SkillName == currentChatSO.favorite)
+            {
+             
+                StartCoroutine(MessageFlow(currentChatSO.MoneySuccess)); 
+            }
+            else
+            {
+                List<Chat> newChat = new List<Chat>();
+                newChat.Add(currentChatSO.MoneySuccess[0]);
+                foreach (var chat in currentChatSO.MoneyFail)
+                StartCoroutine(MessageFlow(newChat)); 
+            }
+            
+            
         }
 
         private IEnumerator ChoiceFlow(Choice choice)
@@ -88,14 +120,13 @@ namespace Tild.Chat
        
         public void CloseChat() 
         {
-            isReady = false;
             onChatClosed.Invoke();
         }
         public void GetReady()
         {
             isReady = true;
         }
-        IEnumerator MessageFlow()
+        IEnumerator MessageFlow(List<Chat> flow)
         {
             foreach (Chat chat in currentChatSO.ChatFlow)
             {
@@ -107,11 +138,23 @@ namespace Tild.Chat
                 }
                 else
                 {
-                    onChatSent.Invoke(chat);
+                    currentTrust += chat.point;
+                    if (currentTrust < -100)
+                    {
+                        isOver = true;
+                        Chat newChat = new Chat();
+                        newChat.message = "상대방에게 차단당했습니다.";
+                        onChatSent.Invoke(chat);
+                        
+                        yield break;
+                    }
                     
+                    onChatSent.Invoke(chat);
+                   
+
                 }
-                
-                yield return new WaitUntil(() => isReady && !isChoising);
+
+                yield return new WaitUntil(() => isReady && !isChoising && !isOver);
             }
         }
     }

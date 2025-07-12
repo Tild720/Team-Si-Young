@@ -1,0 +1,29 @@
+{
+    "NpcId": "1",
+    "image": {
+        "instanceID": 146088
+    },
+    "age": "35",
+    "name": "남태철",
+    "job": "백수",
+    "address": "광중아파트 반지하",
+    "ChatFlow": [
+        {
+            "chatType": 0,
+            "message": "",
+            "choices": [
+                {
+                    "chatType": 4,
+                    "message": "저랑 친해질 20대 친구 구해요~",
+                    "response": [],
+                    "point": -100
+                }
+            ],
+            "time": 0,
+            "hintType": 0
+        }
+    ],
+    "MoneySuccess": [],
+    "MoneyFail": [],
+    "StopChatResponse": []
+}

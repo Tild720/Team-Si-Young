@@ -5,8 +5,4 @@ namespace Tild.Chat
         ChoiceChat, TargetChat, AlertChat,WaitChat, MyChat
     }
 
-    public enum HintType
-    {
-       None, Age, Job, Favorite, Address
-    }
 }
