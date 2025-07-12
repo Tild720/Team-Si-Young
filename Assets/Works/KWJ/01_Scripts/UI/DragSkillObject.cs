@@ -1,15 +1,18 @@
 using TMPro;
-using UnityEngine.EventSystems;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using Works.KWJ._01_Scripts.SO;
 
-namespace Works.KWJ._01_Scripts
+namespace Works.KWJ._01_Scripts.UI
 {
     public class DragSkillObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
         [SerializeField] private FraudSkillSo skillSo;
         [SerializeField] private CanvasGroup canvasGroup;
         [SerializeField] private TextMeshProUGUI skillName;
+        [SerializeField] private TextMeshProUGUI skillName2;
+        [SerializeField] private TextMeshProUGUI skillPirce;
+        [SerializeField] private GameObject lockUI;
         
         private Transform _originParents;
         private Vector3 _originPostiton;
@@ -18,10 +21,13 @@ namespace Works.KWJ._01_Scripts
         private Vector3 _beginPostiton;
 
         public bool IsInInventroySlot { get; set; }
+        public bool IsBuy { get; set; }
 
         private void Awake()
         {
             skillName.text = skillSo.SkillName;
+            skillName2.text = "<" + skillSo.SkillName + ">";
+            skillPirce.text = skillSo.Price + "";
         }
 
         private void Start()
@@ -38,10 +44,20 @@ namespace Works.KWJ._01_Scripts
             return null;
         }
 
-        public void SetOrigin()
+        public void BuySkill()
+        {
+            if (PlayerManager.Instance.Player.PlayerMoney.CurrentMoney < skillSo.Price)
+                return;
+            
+            lockUI.SetActive(false);
+            IsBuy = true;
+        }
+
+        public void ResetOrigin()
         {
             transform.SetParent(_originParents);
             transform.position = _originPostiton;
+            IsInInventroySlot = false;
         }
         
         public void OnBeginDrag(PointerEventData eventData)
@@ -61,7 +77,7 @@ namespace Works.KWJ._01_Scripts
             if (_beginParents == transform.parent)
             {
                 if(IsInInventroySlot == true)
-                    SetOrigin();
+                    ResetOrigin();
                 else
                     transform.position = _beginPostiton;
             }

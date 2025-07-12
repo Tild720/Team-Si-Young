@@ -2,34 +2,31 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Works.KWJ._01_Scripts.SO;
 
-namespace Works.KWJ._01_Scripts
+namespace Works.KWJ._01_Scripts.UI
 {
-    public class InventorySlot : MonoBehaviour, IDropHandler
+    public class SkillInventorySlot : MonoBehaviour, IDropHandler
     {
         private DragSkillObject _dagSkillObject;
         
         public void PutInSkill(DragSkillObject dagSkillObject)
         {
             if(_dagSkillObject == dagSkillObject) return;
-            
+
             if (_dagSkillObject != null)
-                _dagSkillObject.SetOrigin();
+            {
+                _dagSkillObject.ResetOrigin();
+            }
 
             _dagSkillObject = dagSkillObject;
             _dagSkillObject.IsInInventroySlot = true;
         }
-        
-        public void TakeOutSkill()
-        {
-            _dagSkillObject = null;
-        }
 
-        public SkillType GetSkillType()
+        public FraudSkillSo GetSkillSo()
         {
             if(_dagSkillObject != null)
-                return _dagSkillObject.GetSkillSo().SkillType;
+                return _dagSkillObject.GetSkillSo();
 
-            return SkillType.None;
+            return null;
         }
     
         public void OnDrop(PointerEventData eventData)

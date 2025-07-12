@@ -6,8 +6,13 @@ namespace Works.KWJ._01_Scripts.SO
     {
         None = -1,
         
-        Test1,
-        Test2,
+        HungerSkill_1,
+        ParentsSkill_2,
+        TravelSkill_3,
+        AccidentSkill_4,
+        KoreaSkill_5,
+        CallSkill_6,
+        InvestSkill_7,
         
         Max 
     }
@@ -17,10 +22,12 @@ namespace Works.KWJ._01_Scripts.SO
     {
         public string SkillName;
 
-        [TextArea] public string Explanation;
+        [TextArea] public string Code;
 
         [field: Space] 
         
         public SkillType SkillType;
+        
+        public int Price;
     }
 }

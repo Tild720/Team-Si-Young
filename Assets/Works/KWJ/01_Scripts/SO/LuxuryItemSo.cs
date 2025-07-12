@@ -2,14 +2,13 @@ using UnityEngine;
 
 namespace Works.KWJ._01_Scripts.SO
 {
-    public class LuxuryItemSo : MonoBehaviour
+    [CreateAssetMenu(fileName = "LuxuryItemSo", menuName = "SO/LuxuryItemSo", order = 0)]
+    public class LuxuryItemSo : ScriptableObject
     {
         public Sprite ItemIcon; 
         
         public string ItemName;
 
-        [TextArea] public string Explanation;
-        
         public int Price;
     }
 }

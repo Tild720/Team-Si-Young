@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af4dee4197834f259413dab393d3fffe, type: 3}
-  m_Name: FraudSkillSo
+  m_Script: {fileID: 11500000, guid: 3ed51f1ef34a4945ba7907b2c446992a, type: 3}
+  m_Name: ChanelSo
   m_EditorClassIdentifier: 
-  SkillIcon: {fileID: 0}
-  SkillName: "\uBC30\uACE0\uD504\uB2E4"
-  Explanation: 
-  SkillType: 0
-  MinValue: 0
-  MaxValue: 0
+  ItemIcon: {fileID: -1691912840, guid: beeeaf3c8e6470449917468d1a7e5a66, type: 3}
+  ItemName: "\uC0E4\uB12C"
+  Price: 200

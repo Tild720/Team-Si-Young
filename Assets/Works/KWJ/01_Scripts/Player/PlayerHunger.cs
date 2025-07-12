@@ -3,20 +3,20 @@ using UnityEngine;
 
 namespace Works.KWJ._01_Scripts
 {
-    public class Hunger : MonoBehaviour
+    public class PlayerHunger : MonoBehaviour
     {
-
+        [field:SerializeField] public int CurrentHunger { get; private set; }
+        
         [SerializeField] private int hungerValue;
         [SerializeField] private float waitHungerTime;
 
         [SerializeField] private int maxHunger = 100;
-        private int _currentHunger;
-        
+
         private bool _isWaitHungerTime;
 
         private void Awake()
         {
-            _currentHunger = maxHunger;
+            CurrentHunger = maxHunger;
         }
 
         private void Update()
@@ -27,11 +27,11 @@ namespace Works.KWJ._01_Scripts
 
         public void SetHunger(int hunger)
         {
-            _currentHunger += hunger;
+            CurrentHunger += hunger;
             
-            if (maxHunger > _currentHunger)
+            if (maxHunger < CurrentHunger)
             {
-                _currentHunger = maxHunger;
+                CurrentHunger = maxHunger;
             }
         }
 
@@ -41,7 +41,7 @@ namespace Works.KWJ._01_Scripts
             
             yield return new WaitForSeconds(waitHungerTime);
 
-            _currentHunger -= hungerValue;
+            CurrentHunger -= hungerValue;
             
             _isWaitHungerTime = false;
         }
