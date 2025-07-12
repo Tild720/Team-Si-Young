@@ -2,7 +2,7 @@ namespace Tild.Chat
 {
     public enum ChatType
     {
-        ChoiceChat, TargetChat, AlertChat,WaitChat
+        ChoiceChat, TargetChat, AlertChat,WaitChat, MyChat
     }
 
     public enum HintType

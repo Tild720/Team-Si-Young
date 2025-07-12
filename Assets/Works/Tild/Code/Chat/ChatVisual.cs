@@ -1,3 +1,4 @@
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,8 +16,10 @@ namespace Tild.Chat
 
         public void ShowChat(Chat chat)
         {
+            WaitChat(chat.time);
             switch (chat.chatType)
             {
+                
                 case ChatType.TargetChat:
                     ChatBubble TargetChatBubble = Instantiate(targetPrefab, chatParent.transform).transform.GetComponent<ChatBubble>();
                     TargetChatBubble.Initialize(chat);
@@ -30,7 +33,21 @@ namespace Tild.Chat
                     ChatBubble AlertChatBubble = Instantiate(alertPrefab, chatParent.transform).transform.GetComponent<ChatBubble>();
                     AlertChatBubble.Initialize(chat);
                     break;
+                case ChatType.MyChat:
+                    
+                    ChatBubble MyChatBubble = Instantiate(myChatPrefab, chatParent.transform).transform.GetComponent<ChatBubble>();
+                    MyChatBubble.Initialize(chat);
+                    break;
+                case ChatType.WaitChat:
+                    
+                    break;
             }
+        }
+
+        private IEnumerator WaitChat(float time)
+        {
+            yield return new WaitForSeconds(time);
+            ChatManager.Instance.GetReady();
         }
 
         public void CloseChat(Chat chat)

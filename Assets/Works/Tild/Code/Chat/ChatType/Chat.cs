@@ -13,7 +13,7 @@ namespace Tild.Chat
         public string message;
         
         public List<Choice> choices;
-
+        public int time;
         public HintType hintType;
 
 

@@ -15,16 +15,32 @@ MonoBehaviour:
   NpcId: 1
   ChatFlow:
   - chatType: 2
-    message: "\uC9C4\uC785\uD588\uC2B5\uB2C8\uB2E4\n"
+    message: "\uC624\uC804 12:50"
     choices: []
     hintType: 0
   - chatType: 1
     message: "\uC548\uB155\uD558\uC138\uC694\n"
     choices: []
     hintType: 0
-  - chatType: 1
+  - chatType: 0
     message: "\uBC18\uAC11\uC2B5\uB2C8"
-    choices: []
+    choices:
+    - chatType: 0
+      message: HIHIHIIHi
+      response:
+      - chatType: 4
+        message: "\uB808\uC804\uB4DC\uB2E4 \uB808\uC804\uB4DC\uC57C~"
+        choices: []
+        hintType: 0
+      - chatType: 1
+        message: "\uC815\uB9D0 \uACE0\uB9C8\uC6CC!!!!"
+        choices: []
+        hintType: 0
+      point: 0
+    - chatType: 0
+      message: sdsdsdsd
+      response: []
+      point: 0
     hintType: 0
   - chatType: 1
     message: "\uC548\uB155\uD558\uC138\uC694~~~"

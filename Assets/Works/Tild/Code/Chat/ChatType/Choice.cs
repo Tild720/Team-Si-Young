@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Tild.Chat
@@ -11,7 +12,7 @@ namespace Tild.Chat
         [TextArea]
         public string message;
         [TextArea]
-        public string response;
+        public List<Chat> response;
         public int point;
     }
 }
