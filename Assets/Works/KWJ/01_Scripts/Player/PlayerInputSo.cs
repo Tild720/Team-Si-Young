@@ -44,7 +44,7 @@ namespace Works.KWJ._01_Scripts
         
         public void OnInteract(InputAction.CallbackContext context)
         {
-            if (context.started == true)
+            if (context.performed == true)
                 OnInteractionAction?.Invoke();
         }
 
@@ -52,7 +52,7 @@ namespace Works.KWJ._01_Scripts
         {
             if (context.started == true)
                 OnLookAroundAction?.Invoke(true);
-            else if (context.started == false)
+            else if (context.canceled == true)
                 OnLookAroundAction?.Invoke(false);
         }
     }
