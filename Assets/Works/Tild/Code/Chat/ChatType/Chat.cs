@@ -1,9 +1,21 @@
+using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 namespace Tild.Chat
 {
-    public abstract class Chat : ScriptableObject
+    [System.Serializable]
+    public class Chat
     {
-        public abstract string Message { get; }
+        public ChatType chatType;
+
+        [TextArea]
+        public string message;
+        
+        public List<Choice> choices;
+
+        public HintType hintType;
+
+
     }
 }
