@@ -18,8 +18,8 @@ namespace Works.KWJ._01_Scripts
 
         private void Update()
         {
-            playerMoney.text = player.PlayerMoney.CurrentMoney + "";
-            playerHunger.text = player.PlayerHunger.CurrentHunger + "";
+            playerMoney.text = "$" +player.PlayerMoney.CurrentMoney ;
+            playerHunger.text = "허기 " +player.PlayerHunger.CurrentHunger + "%";
         }
     }
 }

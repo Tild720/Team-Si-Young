@@ -50,6 +50,7 @@
                 canvasGroup.DOFade(0, 0.2f).OnComplete(() =>
                 {
                     List<FraudSkillSo> list = SkillManager.Instance.GetSkillList();
+                    ;
                     foreach (FraudSkillSo fraudSkill in list)
                     {
                         print(fraudSkill.SkillName);

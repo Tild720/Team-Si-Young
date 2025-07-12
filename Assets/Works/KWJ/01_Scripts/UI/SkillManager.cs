@@ -22,7 +22,7 @@ namespace Works.KWJ._01_Scripts.UI
             {
                 if(_inventoryPanel.childCount == 3) break;
                 
-                GameObject slotObject = Instantiate(_slotPrefab);
+                GameObject slotObject = Instantiate(_slotPrefab, _inventoryPanel);
                 SkillInventorySlot skillInventorySlot = slotObject.GetComponent<SkillInventorySlot>();
                 _inventorySlots.Add(skillInventorySlot);
             }

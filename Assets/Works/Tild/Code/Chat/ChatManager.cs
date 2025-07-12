@@ -110,8 +110,11 @@ namespace Tild.Chat
                 {
                     newChat.Add(chat);
                 }
-                
+
                 foreach (var chat in currentChatSO.MoneyFail)
+                {
+                    newChat.Add(chat);
+                }
                     
                     StartCoroutine(MessageFlow(newChat));
             }
