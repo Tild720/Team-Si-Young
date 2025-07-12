@@ -8,7 +8,7 @@ namespace Works.KWJ._01_Scripts
     {
         public void GameRestart()
         {
-            SceneManager.LoadScene("KWJ");
+            SceneManager.LoadScene("KWJ2");
         }
         
         public void GameExit()

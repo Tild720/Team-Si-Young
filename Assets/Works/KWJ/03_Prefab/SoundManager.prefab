@@ -45,5 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _soundPrefab: {fileID: 2582540364428606462, guid: 34ae6b3adcc0d4d46ad976c8eda40410, type: 3}
-  _sfxClips: []
+  _sfxClips:
+  - {fileID: 8300000, guid: 3b62fee169c1b0041a95cd2e80849a20, type: 3}
+  - {fileID: 8300000, guid: 4323c7f9edd47dd479b4ca645e7de042, type: 3}
+  - {fileID: 8300000, guid: 7e82529a6b390cf4694905d3c20eace7, type: 3}
+  - {fileID: 8300000, guid: 83c165e969834df4f89c55a019d1379e, type: 3}
+  - {fileID: 8300000, guid: a4cb327ea3d793741b9022c81bbcd613, type: 3}
   _bgmClips: []
