@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using Core.Scripts;
+using DG.Tweening;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Events;
 using Tild.Chat;
 using Unity.VisualScripting;
+using UnityEngine.UI;
 using Works.KWJ._01_Scripts.SO;
 
 namespace Tild.Chat
@@ -29,7 +31,7 @@ namespace Tild.Chat
 
         [SerializeField] private GameObject chatGUI;
         [SerializeField] private GameObject exploreGUI;
-       // [SerializeField] private GameObject 
+        [SerializeField] private Image fadeImage;
 
         private Dictionary<string, ChatHistory> chatHistories = new();
         
@@ -58,23 +60,24 @@ namespace Tild.Chat
             onChoiced.Invoke();
             StartCoroutine(ChoiceFlow(choice));
         }
+
         public void MoneyChoiceMessage(FraudSkillSo fraudSkillSo)
         {
             onChoiced.Invoke();
             if (fraudSkillSo.SkillName == currentChatSO.favorite)
             {
-             
-                StartCoroutine(MessageFlow(currentChatSO.MoneySuccess)); 
+
+                StartCoroutine(MessageFlow(currentChatSO.MoneySuccess));
             }
             else
             {
                 List<Chat> newChat = new List<Chat>();
                 newChat.Add(currentChatSO.MoneySuccess[0]);
                 foreach (var chat in currentChatSO.MoneyFail)
-                StartCoroutine(MessageFlow(newChat)); 
+                    StartCoroutine(MessageFlow(newChat));
             }
-            
-            
+
+
         }
 
         private IEnumerator ChoiceFlow(Choice choice)
@@ -118,9 +121,14 @@ namespace Tild.Chat
             return currentChoice;
         }
        
-        public void CloseChat() 
+        public void CloseChat()
         {
-            onChatClosed.Invoke();
+            fadeImage.DOFade(1, 0.5f).SetDelay(2.5f).OnComplete(() =>
+            {  
+                chatGUI.SetActive(false);
+                exploreGUI.SetActive(true); 
+                
+            });
         }
         public void GetReady()
         {
@@ -145,7 +153,7 @@ namespace Tild.Chat
                         Chat newChat = new Chat();
                         newChat.message = "상대방에게 차단당했습니다.";
                         onChatSent.Invoke(chat);
-                        
+                        CloseChat();
                         yield break;
                     }
                     

@@ -13,23 +13,6 @@ namespace Tild.Chat
     public class ChatSO : ScriptableObject
     {
         public ChatInfo chatInfo;
-        public int chatID;
-
-        private void OnValidate()
-        {
-       
-            string json = JsonUtility.ToJson(chatInfo, true);
-
-#if UNITY_EDITOR
-       
-            string path = Application.dataPath + "/Resources/" + chatID + "Chat.txt";
-            File.WriteAllText(path, json);
-            Debug.Log($"ChatInfo 저장됨: {path}");
-
-           
-            AssetDatabase.Refresh();
-#endif
-        }
     }
 
 }

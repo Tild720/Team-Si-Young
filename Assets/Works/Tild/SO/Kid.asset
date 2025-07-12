@@ -19,24 +19,29 @@ MonoBehaviour:
     name: "\uBC15\uBBFC\uADDC"
     job: "\uB0A8\uD0DC\uCD08 1\uC9F1"
     address: "\uD0DC\uC0B0\uC544\uD30C\uD2B8 13\uCE35"
+    favorite: 
     ChatFlow:
     - chatType: 4
       message: "\uB85C\uBE14\uB85D\uC2A4 \uD560\uC0AC\uB78C \uAD6C\uD569\uB2C8\uB2E4."
+      point: 0
       choices: []
       time: 0
       hintType: 0
     - chatType: 1
       message: "\uC624! \uC800\uC694! \uC800\uC694!"
+      point: 0
       choices: []
       time: 0
       hintType: 0
     - chatType: 1
       message: "\uC800\uB791 \uAC19\uC774 \uB85C\uBE14\uB85D\uC2A4 \uD558\uC2E4\uB798\uC694?"
+      point: 0
       choices: []
       time: 0
       hintType: 0
     - chatType: 0
       message: 
+      point: 0
       choices:
       - chatType: 4
         message: "\uADF8\uB7AD"
@@ -47,6 +52,7 @@ MonoBehaviour:
         response:
         - chatType: 0
           message: "\uCCD0\uB9DE\uC744\uB798\uC694?"
+          point: 0
           choices: []
           time: 0
           hintType: 0
@@ -55,32 +61,38 @@ MonoBehaviour:
       hintType: 0
     - chatType: 1
       message: "\uC800\uD76C \uBB34\uC2A8 \uAC8C\uC784 \uD560\uB798\uC694?"
+      point: 0
       choices: []
       time: 0
       hintType: 0
     - chatType: 4
       message: "\uC6B0\uB9AC \uB77C\uC774\uBC8C \uD560\uAE4C?"
+      point: 0
       choices: []
       time: 0
       hintType: 0
     - chatType: 4
       message: "\uB77C\uC774\uBC8C \uC798\uD574?"
+      point: 0
       choices: []
       time: 0
       hintType: 0
     - chatType: 1
       message: "\uC800 \uC644\uC804 \uC798\uD558\uC8E0~"
+      point: 0
       choices: []
       time: 0
       hintType: 0
     - chatType: 0
       message: 
+      point: 0
       choices:
       - chatType: 4
         message: "\uB2C8\uAC00? \uD489\uC774\uB2E4 \uD489\u314B"
         response:
         - chatType: 1
           message: "\uAC1C\uC5B4\uC774\uC5C6\uB124.. \uAC4D \uD63C\uC790 \uB178\uC138\uC694"
+          point: 0
           choices: []
           time: 0
           hintType: 0
@@ -90,6 +102,7 @@ MonoBehaviour:
         response:
         - chatType: 1
           message: "\uAC1C\uC5B4\uC774\uC5C6\uB124.. \uAC4D \uD63C\uC790 \uB178\uC138\uC694"
+          point: 0
           choices: []
           time: 0
           hintType: 0
@@ -98,28 +111,33 @@ MonoBehaviour:
       hintType: 0
     - chatType: 1
       message: "\u314E\u314E \uAC10\uC0AC\uD569\uB2C8\uB2E4!"
+      point: 0
       choices: []
       time: 0
       hintType: 0
     MoneySuccess:
     - chatType: 4
       message: "\uBA4B\uC788\uC73C\uB2C8\uAE4C \uB0B4\uAC00 \uD604\uC9C8\uD574\uC904\uAE4C?"
+      point: -50
       choices: []
       time: 0
       hintType: 0
     - chatType: 1
       message: "\uD5C9! \uC815\uB9D0\uC694?"
+      point: 0
       choices: []
       time: 0
       hintType: 0
     - chatType: 0
       message: 
+      point: 0
       choices:
       - chatType: 4
         message: "\uC9C4\uC9DC\uACA0\uB0D0"
         response:
         - chatType: 1
           message: "\uC800 \uAC08\uAC8C\uC694"
+          point: 0
           choices: []
           time: 0
           hintType: 0
@@ -132,53 +150,73 @@ MonoBehaviour:
       hintType: 0
     - chatType: 0
       message: "\uAC10\uC0AC\uD569\uB2C8\uB2E4!"
+      point: 0
       choices: []
       time: 0
       hintType: 0
     - chatType: 1
       message: "\uACC4\uC815 \uBCF4\uB0C8\uC5B4\uC5EC!"
+      point: 0
       choices: []
       time: 0
       hintType: 0
     - chatType: 0
       message: "\uC624\uCF00\uC789"
+      point: 0
       choices: []
       time: 0
       hintType: 0
     - chatType: 0
       message: .......
+      point: 0
       choices: []
       time: 0
       hintType: 0
     - chatType: 2
       message: "\uC0C1\uB300\uB97C \uCC28\uB2E8\uD558\uC600\uC2B5\uB2C8\uB2E4."
+      point: 0
       choices: []
       time: 0
       hintType: 0
     MoneyFail:
-    - chatType: 0
-      message: 
+    - chatType: 1
+      message: "\uADF8 \uB9D0\uC744 \uBBFF\uACA0\uB0D0?"
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 1
+      message: "\uC774 \uC0AC\uAE30\uAFBC "
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 2
+      message: "\uC0C1\uB300\uBC29\uC5D0\uAC8C \uCC28\uB2E8\uB2F9\uD588\uC2B5\uB2C8\uB2E4. "
+      point: 0
       choices: []
       time: 0
       hintType: 0
     StopChatResponse:
     - chatType: 0
       message: 
+      point: 0
       choices:
       - chatType: 4
         message: ...
         response:
         - chatType: 1
           message: "\uB354 \uD560\uB9D0 \uC788\uB098"
+          point: 0
           choices: []
           time: 0
           hintType: 0
         - chatType: 1
           message: "\uC904 \uAC70\uB77C\uB3C4 \uC788\uC73C\uC2E0\uAC00?!"
+          point: 0
           choices: []
           time: 0
           hintType: 0
         point: 0
       time: 0
       hintType: 0
-  chatID: 3
