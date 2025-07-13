@@ -169,9 +169,11 @@ namespace Tild.Chat
                 chatGUI.SetActive(false);
                 exploreGUI.SetActive(true);
                 currentTrust = 0;
-                isDead = false; 
+                isDead = false;
+                fadeImage.DOFade(0, 0.5f).SetDelay(2);
             });
         }
+        
         public void GetReady()
         {
             isReady = true;
