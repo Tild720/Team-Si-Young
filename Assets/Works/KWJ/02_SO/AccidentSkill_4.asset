@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af4dee4197834f259413dab393d3fffe, type: 3}
   m_Name: AccidentSkill_4
   m_EditorClassIdentifier: 
-  SkillName: "\uC0AC\uACE0 \uB0AC\uC5B4.. \uC544\uD30C\u3160\u3160"
-  Code: 
+  SkillName: "\uCEE4\uD53C \uC0AC \uC8FC\uC138\uC694 \u314E\u314E\u314E"
+  Code: "\uCEE4\uD53C"
   SkillType: 2
   Price: 700
+  cheatChat: []

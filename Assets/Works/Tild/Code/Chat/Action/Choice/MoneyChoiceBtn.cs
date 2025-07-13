@@ -19,7 +19,7 @@ namespace Tild.Chat
         
         public void OnPointerClick(PointerEventData eventData)
         {
-            
+            Debug.Log("OnPointerClick");
             rectTransform.DOScale(new Vector3(1.05f, 1.05f, 1.05f), 0.2f).OnComplete(() =>
             {
                 rectTransform.DOScale(new Vector3(1f, 1f, 1f), 0.2f); 
@@ -29,6 +29,6 @@ namespace Tild.Chat
             
         }
 
-      
+       
     }
 }

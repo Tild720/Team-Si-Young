@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: HungerSkill_1
   m_EditorClassIdentifier: 
   SkillName: "\uBC30\uACE0\uD504\uB2E4"
-  Explanation: 
+  Code: "\uBC25\n"
   SkillType: 0
   Price: 100
+  cheatChat: []

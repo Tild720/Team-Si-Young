@@ -13,6 +13,7 @@
             private CanvasGroup canvasGroup;
             [SerializeField] private GameObject choiceBtnPrefab;
             [SerializeField] private GameObject MoneyChoiceBtnPrefab;
+            [SerializeField] private List<FraudSkillSo> list; 
 
             private void Awake()
             {
@@ -47,20 +48,19 @@
             }
             public void OnMoneyClicked()
             {
+                
                 canvasGroup.DOFade(0, 0.2f).OnComplete(() =>
                 {
-                    List<FraudSkillSo> list = SkillManager.Instance.GetSkillList();
-                    ;
                     foreach (FraudSkillSo fraudSkill in list)
                     {
-                        print(fraudSkill.SkillName);
                         MoneyChoiceBtn prefab = Instantiate(MoneyChoiceBtnPrefab, transform).GetComponent<MoneyChoiceBtn>();
                         prefab.Initialize(fraudSkill);
                     
                     }
 
                 });
-                canvasGroup.blocksRaycasts = false;
+                canvasGroup.blocksRaycasts = true;
+
             }
         }
     }
