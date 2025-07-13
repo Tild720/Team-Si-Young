@@ -30,6 +30,12 @@ namespace Works.KWJ._01_Scripts
                 outline.OnUnfocus();
                 InteractiveObject = hit.transform.gameObject;
                 outline.OnFocus(hit.collider.gameObject);
+                
+                if (player.PlayerMovement.IsComputerView == true)
+                {
+                    outline.OnUnfocus();
+                }
+                
                 return true;
             }
             

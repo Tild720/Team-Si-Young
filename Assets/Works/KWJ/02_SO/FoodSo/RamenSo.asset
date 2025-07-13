@@ -16,4 +16,4 @@ MonoBehaviour:
   FoodName: "\uB77C\uBA74"
   Price: 25
   HungerValue: 10
-  PostObject: {fileID: 5340893832226306314, guid: 1db0b54a392f4bc4da5be47c56507071, type: 3}
+  PostObject: {fileID: 4706270995634500342, guid: 81e86375fa9a1ca4b8ab7ecdc99ca300, type: 3}

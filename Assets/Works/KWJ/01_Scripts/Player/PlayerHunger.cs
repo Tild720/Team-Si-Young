@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Works.KWJ._01_Scripts
 {
@@ -23,6 +24,9 @@ namespace Works.KWJ._01_Scripts
         {
             if (_isWaitHungerTime == false)
                 StartCoroutine(WaitDecreaseHunger());
+            
+            if(CurrentHunger <= 0)
+                SceneManager.LoadScene("Tild");
         }
 
         public void SetHunger(int hunger)
