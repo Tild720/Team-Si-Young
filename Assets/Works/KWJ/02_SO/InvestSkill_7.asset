@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: InvestSkill_7
   m_EditorClassIdentifier: 
   SkillName: "\uD22C\uC790 \uD558\uC790!"
-  Code: 
-  SkillType: 5
+  Code: "\uD22C\uC790"
+  SkillType: 6
   Price: 2000
+  cheatChat: []

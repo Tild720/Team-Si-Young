@@ -1,0 +1,233 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86bf2550d4424efc807e08ce106d79dd, type: 3}
+  m_Name: line
+  m_EditorClassIdentifier: 
+  chatInfo:
+    NpcId: 5
+    image: {fileID: 21300000, guid: 372813001e7e5364f90d84566ed343e0, type: 3}
+    age: 20
+    name: "\uCD5C\uC120\uD55C"
+    job: "\uAC9C\uB9C8\uACE0 \uCF54\uB529\uC120\uC0DD\uB2D8"
+    address: "\uBE44\uC8FC\uC5BC \uC2A4\uD29C\uB514\uC624"
+    desc: null
+    favorite: "\uCEE4\uD53C"
+    ChatFlow:
+    - chatType: 0
+      message: 
+      point: 0
+      choices:
+      - chatType: 4
+        message: "\uD558\uC774"
+        response:
+        - chatType: 1
+          message: "\uBB50\uC9C0 \uC774 \uC2F8\uAC00\uC9C0\uB294"
+          point: 0
+          choices: []
+          time: 0
+          hintType: 0
+        point: -100
+      - chatType: 4
+        message: "\uC548\uB155\uD558\uC138\uC694\u314E\u314E"
+        response:
+        - chatType: 1
+          message: "\uC548\uB155\uD558\uC138\uC694"
+          point: 0
+          choices: []
+          time: 0
+          hintType: 0
+        point: 10
+      time: 0
+      hintType: 0
+    - chatType: 4
+      message: "\uC120\uC0DD\uB2D8 \uAE00 \uC798 \uBCF4\uACE0 \uC788\uC5B4\uC694."
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 1
+      message: "\uBD10\uC8FC\uC154\uC11C \uAC10\uC0AC\uD569\uB2C8\uB2E4."
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 4
+      message: "\uB3C4\uC6C0 \uB9CE\uC774 \uB3FC\uC694."
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 4
+      message: "\uC120\uC0DD\uB2D8\uC740 \uAC9C\uB9C8\uACE0\uC5D0 \uB2E4\uB2C8\uC8E0?"
+      point: 0
+      choices: []
+      time: 0
+      hintType: 2
+    - chatType: 4
+      message: "\uB355\uBD84\uC5D0 \uCF54\uB529 \uC2DC\uC791\uD560"
+      point: 0
+      choices: []
+      time: 0
+      hintType: 3
+    - chatType: 4
+      message: "\uC6A9\uAE30\uAC00 \uC0DD\uACBC\uC5B4\uC694."
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 1
+      message: "\uCC9C\uCC9C\uD788 \uAFB8\uC900\uD788 \uD558\uC2DC\uBA74 \uB3FC\uC694."
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 4
+      message: "\uADFC\uB370 \uB9C9\uD788\uBA74 \uBA58\uBD95\uC774 \uC640\uC11C "
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 4
+      message: "\uC880 \uD798\uB4E4\uB354\uB77C\uACE0\uC694."
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 1
+      message: "\uC800\uB3C4 \uBC84\uADF8\uB791 \uBC24\uC0C8 \uC2F8\uC6B8 \uB54C
+        \uB9CE\uC544\uC694."
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 4
+      message: "\uBC24\uC0C8\uB2E4 \uBCF4\uBA74 \uCEE4\uD53C \uC5C6\uC778 \uBABB
+        \uBC84\uD168\uC694."
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 4
+      message: "\uC120\uC0DD\uB2D8 \uCEE4\uD53C \uC88B\uC544\uD558\uC2DC\uC8E0?"
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 1
+      message: "\uB124, \uB9E4\uC77C \uB9C8\uC2ED\uB2C8\uB2E4."
+      point: 0
+      choices: []
+      time: 0
+      hintType: 4
+    - chatType: 1
+      message: "\uC800\uB3C4 \uB9C8\uC2DC\uACE0 \uC2F6\uB124\uC694\u3160\u3160.."
+      point: 0
+      choices: []
+      time: 0
+      hintType: 1
+    - chatType: 1
+      message: "\uBE44\uC8FC\uC5BC \uC2A4\uD29C\uB514\uC624\uB97C \uAE4C\uC138\uC694."
+      point: 0
+      choices: []
+      time: 0
+      hintType: 2
+    - chatType: 1
+      message: "\uC65C\uC694? \uBABB\uB4DC\uC138\uC694?"
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 0
+      message: 
+      point: 0
+      choices:
+      - chatType: 4
+        message: "\uB3C8\uC774 \uC5C6\uC5B4\uC11C \u3160\u3160.."
+        response:
+        - chatType: 0
+          message: "\uC8C4\uC1A1\uD569\uB2C8\uB2E4"
+          point: 0
+          choices: []
+          time: 0
+          hintType: 0
+        point: 30
+      time: 0
+      hintType: 0
+    MoneySuccess:
+    - chatType: 4
+      message: "\uCEE4\uD53C\uC880 \uC0AC\uC8FC\uC138\uC694.."
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 1
+      message: "\uD760..."
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 1
+      message: "\uC54C\uACA0\uC2B5\uB2C8\uB2E4."
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 4
+      message: "\uD5C9! \uC9C4\uC9DC\uC694?"
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 4
+      message: "\uAC10\uC0AC\uD569\uB2C8\uB2E4\u3160\u3160"
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 1
+      message: "\uAD1C\uCC2E\uC544\uC694."
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 1
+      message: "\uBCC4\uAC70 \uC544\uB2C8\uC5D0\uC694."
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 1
+      message: "\uC0C1\uB300\uB97C \uCC28\uB2E8\uD558\uC600\uC2B5\uB2C8\uB2E4."
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    MoneyFail:
+    - chatType: 1
+      message: "\uC0AC\uAE30\uB97C \uCE58\uB2E4\uB2C8.."
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 1
+      message: "\uC815\uB9D0 \uC2E4\uB9DD\uC774\uB124\uC694"
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 1
+      message: "\uC0C1\uB300\uBC29\uC5D0\uAC8C \uCC28\uB2E8\uB2F9\uD558\uC600\uC2B5\uB2C8\uB2E4."
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    StopChatResponse: []

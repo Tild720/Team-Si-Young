@@ -6,7 +6,7 @@ using Works.KWJ._01_Scripts.SO;
 
 namespace Tild.Chat
 {
-    public class MoneyChoiceBtn : MonoBehaviour, IPointerUpHandler, IPointerDownHandler,IPointerClickHandler
+    public class MoneyChoiceBtn : MonoBehaviour, IPointerClickHandler
     {
         [SerializeField] private TMP_Text text;
         [SerializeField] private RectTransform rectTransform;
@@ -19,7 +19,7 @@ namespace Tild.Chat
         
         public void OnPointerClick(PointerEventData eventData)
         {
-            
+            Debug.Log("OnPointerClick");
             rectTransform.DOScale(new Vector3(1.05f, 1.05f, 1.05f), 0.2f).OnComplete(() =>
             {
                 rectTransform.DOScale(new Vector3(1f, 1f, 1f), 0.2f); 
@@ -29,14 +29,6 @@ namespace Tild.Chat
             
         }
 
-        public void OnPointerUp(PointerEventData eventData)
-        {
-            rectTransform.rotation = new Quaternion(0,0,0,0);
-        }
-
-        public void OnPointerDown(PointerEventData eventData)
-        {
-            rectTransform.rotation = new Quaternion(0,0,15,0);
-        }
+       
     }
 }

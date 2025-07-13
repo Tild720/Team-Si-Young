@@ -98,7 +98,7 @@ namespace Tild.Chat
         public void MoneyChoiceMessage(FraudSkillSo fraudSkillSo)
         {
             onChoiced.Invoke();
-            if (fraudSkillSo.SkillName == currentChatSO.favorite)
+            if (fraudSkillSo.Code == currentChatSO.favorite)
             {
 
                 StartCoroutine(MessageFlow(currentChatSO.MoneySuccess));
@@ -106,14 +106,16 @@ namespace Tild.Chat
             else
             {
                 List<Chat> newChat = new List<Chat>();
-                foreach (var chat in fraudSkillSo.cheatChat)
+               
+                newChat.Add(currentChatSO.MoneySuccess[0]);
+                
+
+                foreach (var chat in currentChatSO.MoneyFail)
                 {
                     newChat.Add(chat);
                 }
-                
-                foreach (var chat in currentChatSO.MoneyFail)
                     
-                    StartCoroutine(MessageFlow(newChat));
+                StartCoroutine(MessageFlow(newChat));
             }
 
 

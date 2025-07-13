@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86bf2550d4424efc807e08ce106d79dd, type: 3}
+  m_Name: instructor
+  m_EditorClassIdentifier: 
+  chatInfo:
+    NpcId: 7
+    image: {fileID: 21300000, guid: 7a18d5a3ab2299846b49ee96619346d5, type: 3}
+    age: 45
+    name: "\uAD50\uAD00"
+    job: "\uAD50\uAD00"
+    address: "\uBD88\uBA85"
+    desc: "\uAD50\uAD00"
+    favorite: "\uB3C8"
+    ChatFlow:
+    - chatType: 1
+      message: "\uC548\uB155\uD558\uC2E0\uAC00 \uB098\uB294 \uB108\uC73C \uAD50\uAD00"
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 0
+      message: 
+      point: 0
+      choices:
+      - chatType: 4
+        message: "\uC774\uB807\uAC8C \uB300\uD654\uB97C \uD1B5\uD574"
+        response:
+        - chatType: 1
+          message: "\uC54C\uB9DE\uC740 \uC218\uBC95\uC744 \uC0AC\uC6A9\uD55C\uB2E4."
+          point: 0
+          choices: []
+          time: 0
+          hintType: 0
+        point: 20
+      - chatType: 4
+        message: "\uC0C1\uB300\uBC29\uC758 \uCDE8\uD5A5\uC744 \uC54C\uC544\uB0B4"
+        response:
+        - chatType: 1
+          message: "\uC54C\uB9DE\uC740 \uC218\uBC95\uC744 \uC0AC\uC6A9\uD55C\uB2E4."
+          point: 0
+          choices: []
+          time: 0
+          hintType: 0
+        point: -100
+      time: 0
+      hintType: 0
+    - chatType: 1
+      message: "\uB610\uD55C! \uC0C1\uB300\uBC29\uC774 \uC54C\uC544\uCC28\uB9B4\uC218
+        \uC788\uC73C\uB2C8"
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 1
+      message: "\uC870\uC2EC\uD558\uACE0 \uB610 \uC870\uC2EC\uD574\uB77C"
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 4
+      message: "\uB2F5\uBCC0\uC744 \uC798\uD574\uB77C"
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 1
+      message: "\uC774\uBC88\uC5D4 \uD14C\uC2A4\uD2B8\uB85C"
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 1
+      message: "\uB098\uD55C\uD14C \uB3C8\uC744 \uB72F\uC5B4\uBD10\uB77C"
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 1
+      message: "\uB098\uC5D0\uAC8C \uB3C8 \uC220\uBC95\uC744 \uC368\uBD10\uB77C"
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    MoneySuccess:
+    - chatType: 1
+      message: "\uC798\uD588\uB2E4. \uC774\uC81C \uB2E4\uB978 \uC0AC\uB78C\uB4E4\uC744 "
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    - chatType: 1
+      message: "\uC18D\uC5EC\uB77C!!!!"
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    MoneyFail:
+    - chatType: 1
+      message: "\uC774\uAC83\uB3C4 \uBABB\uD558\uB2E4\uB2C8! \uB2E4\uC2DC \uC624\uAC70\uB77C!"
+      point: 0
+      choices: []
+      time: 0
+      hintType: 0
+    StopChatResponse: []
