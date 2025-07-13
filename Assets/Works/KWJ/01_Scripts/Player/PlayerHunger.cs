@@ -23,6 +23,7 @@ namespace Works.KWJ._01_Scripts
         {
             if (_isWaitHungerTime == false)
                 StartCoroutine(WaitDecreaseHunger());
+            
         }
 
         public void SetHunger(int hunger)
